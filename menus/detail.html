@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Detail</title>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="./detail.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">Cafe</a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="./list.html">Menu</a>
+        <a href="../basket/list.html">Basket</a>
+        <a href="../orders/list.html">Orders</a>
+        <a href="../my/index.html">My</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <a class="back-link" href="./list.html">Back to menu</a>
+      <section id="detail-root" class="detail-root" aria-live="polite"></section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="./detail.js"></script>
+  </body>
+</html>
