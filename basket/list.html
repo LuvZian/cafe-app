@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basket</title>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="./list.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">Cafe</a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="../menus/list.html">Menu</a>
+        <a href="./list.html" aria-current="page">Basket</a>
+        <a href="../orders/list.html">Orders</a>
+        <a href="../my/index.html">My</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="basket-hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Ready when you are</p>
+          <h1 id="page-title">Basket</h1>
+          <p class="hero-copy">Review your cafe picks, adjust quantities, and place your order.</p>
+        </div>
+        <a class="menu-link" href="../menus/list.html">Add menu</a>
+      </section>
+
+      <section class="basket-layout" aria-live="polite">
+        <div class="basket-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow dark">Your order</p>
+              <h2>Items</h2>
+            </div>
+            <button id="clear-button" class="ghost-button" type="button">Clear</button>
+          </div>
+          <div id="basket-list" class="basket-list"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <h2>Your basket is empty</h2>
+            <p>Add a drink or dessert from the menu.</p>
+            <a href="../menus/list.html">Browse menu</a>
+          </div>
+        </div>
+
+        <aside class="summary-panel" aria-label="Basket summary">
+          <p class="eyebrow dark">Summary</p>
+          <dl class="summary-list">
+            <div>
+              <dt>Items</dt>
+              <dd id="summary-count">0</dd>
+            </div>
+            <div>
+              <dt>Total</dt>
+              <dd id="summary-total">0 KRW</dd>
+            </div>
+          </dl>
+          <button id="order-button" class="order-button" type="button">Place order</button>
+          <p id="summary-note" class="summary-note">You can change quantities before ordering.</p>
+        </aside>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="./list.js"></script>
+  </body>
+</html>
