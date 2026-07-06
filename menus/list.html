@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Menu</title>
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="./list.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html">Cafe</a>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="./list.html" aria-current="page">Menu</a>
+        <a href="../basket/list.html">Basket</a>
+        <a href="../orders/list.html">Orders</a>
+        <a href="../my/index.html">My</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="menu-hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Freshly brewed today</p>
+          <h1 id="page-title">Menu</h1>
+          <p class="hero-copy">Choose coffee, tea, bakery, and desserts for your cafe break.</p>
+        </div>
+        <a class="basket-link" href="../basket/list.html">
+          Basket
+          <span id="cart-count" class="cart-count">0</span>
+        </a>
+      </section>
+
+      <section class="toolbar" aria-label="Menu filters">
+        <label class="search-field">
+          <span class="sr-only">Search menu</span>
+          <input id="search-input" type="search" placeholder="Search menu" autocomplete="off" />
+        </label>
+        <div id="category-tabs" class="category-tabs" role="tablist" aria-label="Categories"></div>
+      </section>
+
+      <section aria-live="polite">
+        <div id="menu-count" class="menu-count"></div>
+        <div id="menu-grid" class="menu-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <h2>No menu found</h2>
+          <p>Try another keyword or category.</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="./list.js"></script>
+  </body>
+</html>
