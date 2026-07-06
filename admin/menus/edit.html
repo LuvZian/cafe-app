@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Menu | Cafe Admin</title>
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Cafe Admin</a>
+    <nav class="nav" aria-label="Admin navigation">
+      <a class="active" href="list.html">Menus</a>
+      <a href="../orders/list.html">Orders</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <a class="back-link" href="list.html">Back to list</a>
+    <section id="formShell" class="form-shell" hidden>
+      <div class="form-head">
+        <p class="eyebrow">Edit Menu</p>
+        <h1>Edit Menu</h1>
+      </div>
+      <form id="menuForm" novalidate>
+        <label><span>Name</span><input id="name" type="text" required maxlength="40"></label>
+        <label><span>Category</span><select id="category" required></select></label>
+        <label><span>Price</span><input id="price" type="number" min="0" step="100" required></label>
+        <label><span>Image URL</span><input id="image" type="url"></label>
+        <label class="full"><span>Description</span><textarea id="description" rows="5" required maxlength="180"></textarea></label>
+        <p id="errorMessage" class="error-message" role="alert"></p>
+        <div class="actions">
+          <button class="primary-button" type="submit">Save</button>
+          <a class="secondary-button" id="detailLink" href="#">Detail</a>
+        </div>
+      </form>
+    </section>
+    <section id="notFound" class="empty-state" hidden>
+      <h1>Menu not found</h1>
+      <p>The menu may have been removed, or the link may be incorrect.</p>
+      <a class="primary-button" href="list.html">Go to list</a>
+    </section>
+  </main>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/utils.js"></script>
+  <script src="edit.js"></script>
+</body>
+</html>

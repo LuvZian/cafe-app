@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Menu | Cafe Admin</title>
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="create.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Cafe Admin</a>
+    <nav class="nav" aria-label="Admin navigation">
+      <a class="active" href="list.html">Menus</a>
+      <a href="../orders/list.html">Orders</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <a class="back-link" href="list.html">Back to list</a>
+    <section class="form-shell">
+      <div class="form-head">
+        <p class="eyebrow">New Menu</p>
+        <h1>Add Menu</h1>
+      </div>
+      <form id="menuForm" novalidate>
+        <label><span>Name</span><input id="name" type="text" required maxlength="40" placeholder="Honey Latte"></label>
+        <label><span>Category</span><select id="category" required></select></label>
+        <label><span>Price</span><input id="price" type="number" min="0" step="100" required placeholder="4500"></label>
+        <label><span>Image URL</span><input id="image" type="url" placeholder="https://example.com/menu.jpg"></label>
+        <label class="full"><span>Description</span><textarea id="description" rows="5" required maxlength="180" placeholder="Describe this menu item."></textarea></label>
+        <p id="errorMessage" class="error-message" role="alert"></p>
+        <div class="actions">
+          <button class="primary-button" type="submit">Save</button>
+          <a class="secondary-button" href="list.html">Cancel</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/utils.js"></script>
+  <script src="create.js"></script>
+</body>
+</html>

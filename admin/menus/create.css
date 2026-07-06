@@ -1,0 +1,73 @@
+@import url("list.css");
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: var(--sp-lg);
+  color: var(--text-secondary);
+  font-weight: 800;
+}
+
+.form-shell,
+.empty-state {
+  padding: clamp(var(--sp-lg), 4vw, var(--sp-2xl));
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: var(--glass-blur);
+}
+
+.form-head {
+  margin-bottom: var(--sp-lg);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-md);
+}
+
+label {
+  display: grid;
+  gap: var(--sp-xs);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+}
+
+.full,
+.actions,
+.error-message {
+  grid-column: 1 / -1;
+}
+
+textarea {
+  min-height: 140px;
+  padding: var(--sp-md);
+  resize: vertical;
+}
+
+.error-message {
+  min-height: 24px;
+  color: #9f2d20;
+  font-weight: 800;
+}
+
+.secondary-button {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--sp-lg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: var(--border-radius-sm);
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}

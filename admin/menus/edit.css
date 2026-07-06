@@ -1,0 +1,7 @@
+@import url("create.css");
+
+.empty-state {
+  display: grid;
+  justify-items: start;
+  gap: var(--sp-md);
+}

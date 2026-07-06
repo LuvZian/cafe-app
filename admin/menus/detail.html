@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Detail | Cafe Admin</title>
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Cafe Admin</a>
+    <nav class="nav" aria-label="Admin navigation">
+      <a class="active" href="list.html">Menus</a>
+      <a href="../orders/list.html">Orders</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <a class="back-link" href="list.html">Back to list</a>
+
+    <section id="detailView" class="detail-shell" hidden>
+      <div class="media-panel" id="imagePanel" aria-hidden="true"></div>
+      <article class="detail-panel">
+        <p class="eyebrow" id="categoryName"></p>
+        <h1 id="menuName"></h1>
+        <p class="price" id="menuPrice"></p>
+        <p class="description" id="menuDescription"></p>
+        <dl class="meta-list">
+          <div><dt>Menu ID</dt><dd id="menuId"></dd></div>
+          <div><dt>Image URL</dt><dd id="menuImage"></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="primary-button" id="editLink" href="#">Edit</a>
+          <button class="secondary-button danger" id="deleteButton" type="button">Delete</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="notFound" class="empty-state" hidden>
+      <h1>Menu not found</h1>
+      <p>The menu may have been removed, or the link may be incorrect.</p>
+      <a class="primary-button" href="list.html">Go to list</a>
+    </section>
+  </main>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/utils.js"></script>
+  <script src="detail.js"></script>
+</body>
+</html>

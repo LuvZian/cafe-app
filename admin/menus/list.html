@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Admin | Cafe App</title>
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="list.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html">Cafe Admin</a>
+    <nav class="nav" aria-label="Admin navigation">
+      <a class="active" href="list.html">Menus</a>
+      <a href="../orders/list.html">Orders</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-head">
+      <div>
+        <p class="eyebrow">Menu Management</p>
+        <h1>Menu List</h1>
+      </div>
+      <a class="primary-button" href="create.html">Add Menu</a>
+    </section>
+
+    <section class="toolbar" aria-label="Menu filters">
+      <label class="field">
+        <span>Search</span>
+        <input id="searchInput" type="search" placeholder="Name or description">
+      </label>
+      <label class="field">
+        <span>Category</span>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="summary-grid" aria-label="Menu summary">
+      <article><span>Total</span><strong id="totalCount">0</strong></article>
+      <article><span>Average Price</span><strong id="averagePrice">0 KRW</strong></article>
+      <article><span>Visible</span><strong id="visibleCount">0</strong></article>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Menu</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="menuTable"></tbody>
+      </table>
+      <p id="emptyState" class="empty-state">No menus match the current filters.</p>
+    </section>
+  </main>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/utils.js"></script>
+  <script src="list.js"></script>
+</body>
+</html>
